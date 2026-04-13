@@ -1,10 +1,10 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "zl_suporte";
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$banco = "zl_suporte";
 
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli($servidor, $usuario, $senha, $banco);
 
 if ($conn->connect_error) {
     die("Erro de conexão: " . $conn->connect_error);

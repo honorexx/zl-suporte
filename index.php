@@ -12,7 +12,7 @@
     <h1>Cadastro da Equipe de Suporte</h1>
     <p class="subtitulo">Sistema para gerenciamento dos membros da equipe do ZL</p>
 
-    <form action="cadastrar.php" method="POST" class="form-card">
+    <form id="formCadastro" class="form-card">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" required>
 
@@ -55,5 +55,6 @@
     </div>
 </div>
 
+<script src="./js/script.js"></script>
 </body>
 </html>

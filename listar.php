@@ -4,7 +4,6 @@ include("config/conexao.php");
 $sql = "SELECT * FROM equipe_suporte ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -37,16 +36,16 @@ $result = $conn->query($sql);
                 <?php if ($result && $result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <tr>
-                            <td><?php echo $row['id']; ?></td>
-                            <td><?php echo htmlspecialchars($row['nome']); ?></td>
-                            <td><?php echo htmlspecialchars($row['email']); ?></td>
-                            <td><?php echo htmlspecialchars($row['telefone']); ?></td>
-                            <td><?php echo htmlspecialchars($row['cargo']); ?></td>
-                            <td><?php echo htmlspecialchars($row['turno']); ?></td>
-                            <td><?php echo htmlspecialchars($row['status']); ?></td>
+                            <td><?php echo $row["id"]; ?></td>
+                            <td><?php echo htmlspecialchars($row["nome"]); ?></td>
+                            <td><?php echo htmlspecialchars($row["email"]); ?></td>
+                            <td><?php echo htmlspecialchars($row["telefone"]); ?></td>
+                            <td><?php echo htmlspecialchars($row["cargo"]); ?></td>
+                            <td><?php echo htmlspecialchars($row["turno"]); ?></td>
+                            <td><?php echo htmlspecialchars($row["status"]); ?></td>
                             <td>
-                                <a class="acao editar" href="editar.php?id=<?php echo $row['id']; ?>">Editar</a>
-                                <a class="acao excluir" href="excluir.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Deseja excluir este registro?')">Excluir</a>
+                                <a class="acao editar" href="editar.php?id=<?php echo $row["id"]; ?>">Editar</a>
+                                <a class="acao excluir" href="excluir.php?id=<?php echo $row["id"]; ?>" onclick="return confirm('Deseja excluir este registro?')">Excluir</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>

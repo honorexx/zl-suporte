@@ -1,11 +1,11 @@
 <?php
 include("config/conexao.php");
 
-if (!isset($_GET['id'])) {
+if (!isset($_GET["id"])) {
     die("ID não informado.");
 }
 
-$id = intval($_GET['id']);
+$id = intval($_GET["id"]);
 
 $sql = "DELETE FROM equipe_suporte WHERE id = ?";
 $stmt = $conn->prepare($sql);
@@ -15,7 +15,7 @@ if ($stmt->execute()) {
     header("Location: listar.php");
     exit();
 } else {
-    echo "Erro ao excluir: " . $conn->error;
+    echo "Erro ao excluir.";
 }
 
 $stmt->close();
