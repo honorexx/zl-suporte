@@ -15,6 +15,7 @@ Este projeto foi desenvolvido utilizando PHP, MySQL, HTML e CSS.
 - MySQL
 - HTML
 - CSS
+- JAVASCRIPT
 
 ## Autor
 
